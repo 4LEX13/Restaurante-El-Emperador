@@ -10,34 +10,32 @@ namespace RestauranteElEmperador.Repository
 {
     public class ClienteRepository : ICliente
     {
-        private ClienteRepository app;
+        private ApplicationDbContext app;
 
         public ClienteRepository(ApplicationDbContext app)
         {
             this.app = app;
-
         }
 
-        public void Buscar(Plato p)
+        public void insertar(Cliente c)
         {
-            app.platos.Find(p);
-        }
-
-        public void insertar(Plato p)
-        {
-            app.Add(p);
+            app.Add(c);
             app.SaveChanges();
         }
 
-        public void Delete(Plato p)
+        public void Delete(Cliente c)
         {
-            app.platos.Remove(p);
-
+            app.clientes.Remove(c);
         }
 
-        public ICollection<Plato> listarPlato()
+        public void Buscar(Cliente c)
         {
-            return app.platos.ToList();
+            app.clientes.Find(c);
+        }
+
+        public ICollection<Cliente> listarcliente()
+        {
+            return app.clientes.ToList();
         }
     }
 }

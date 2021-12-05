@@ -27,10 +27,25 @@ namespace RestauranteElEmperador.Controllers
         {
             Cliente cliente = new Cliente();
 
+            cliente.NombreCliente = "kevin";
+            cliente.ApellidoCliente = "Navarro";
+            cliente.DireccionCliente = "chalatenango";
+            cliente.TelefonoCliente = 785287912;
+            icliente.insertar(cliente);
 
 
             return View();
         }
+
+
+        public IActionResult GetAll()
+        {
+            var DandoFormatoJson = icliente.listarC();
+
+            return Json(new { data = DandoFormatoJson });
+        }
+
+
 
         public IActionResult Privacy()
         {

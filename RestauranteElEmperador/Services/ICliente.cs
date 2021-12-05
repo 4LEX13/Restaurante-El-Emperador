@@ -8,15 +8,15 @@ namespace RestauranteElEmperador.Services
 {
     interface ICliente
     {
-        void insertar(Plato p);
+        void insertar(Cliente c);
 
-        void Delete(Plato p);
-
-
-        void Buscar(Plato p);
+        void Delete(Cliente c);
 
 
-        ICollection<Plato> listarPlato();
+        void Buscar(Cliente c);
+
+
+        ICollection<Cliente> listarcliente();
 
 
 

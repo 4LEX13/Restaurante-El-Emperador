@@ -6,3 +6,59 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<table id="mitabla" class="table table-striped table-hover">
+    <tehead>
+        <tr>
+            <th>
+                cliente id
+            </th>
+            <th>
+                Nombre del cliente
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Telefono
+            </th>
+        </tr>
+
+    </tehead>
+
+</table>
+
+@section scripts{
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var tabla = $('#mitabla').DataTable({
+                "ajax": {
+                    "url": '/Home/GetAll',
+                    "type": "get",
+                    "datatype": "json"
+                },
+
+                "columns": [
+                    { "data": "cliente id", "name": "cliente id", "autowidth": true },
+                    { "data": "Nombre del cliente", "name": "Nombre del cliente", "autowidth": true },
+                    { "data": "Apellido", "name": "Apellido", "autowidth": true }
+                    { "data": "Direccion", "name": "Direccion", "autowidth": true }
+                    { "data": "Telefono", "name": "Telefono", "autowidth": true }
+
+                ]
+
+            });
+
+        });
+
+
+    </script>
+
+}

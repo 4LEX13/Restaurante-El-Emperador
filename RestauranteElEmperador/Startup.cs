@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using RestauranteElEmperador.Repository;
+using RestauranteElEmperador.Services;
+
 
 namespace RestauranteElEmperador
 {
@@ -29,6 +32,9 @@ namespace RestauranteElEmperador
             services.AddDbContext<ApplicationDbContext>(option =>
             option.UseSqlServer(Configuration.GetConnectionString
             ("Defaultconnection")));
+
+
+            services.AddTransient<ICliente, ClienteRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
