@@ -1,10 +1,8 @@
-﻿using System;
-using RestauranteElEmperador.Services;
-using RestauranteElEmperador.Data;
+﻿using RestauranteElEmperador.Data;
 using RestauranteElEmperador.Dominio;
+using RestauranteElEmperador.Services;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestauranteElEmperador.Repository
 {
@@ -17,10 +15,10 @@ namespace RestauranteElEmperador.Repository
             this.app = app;
         }
 
-        public void insertar(Cliente c)
+
+        public void Buscar(Cliente c)
         {
-            app.Add(c);
-            app.SaveChanges();
+            app.clientes.Find(c);
         }
 
         public void Delete(Cliente c)
@@ -28,11 +26,13 @@ namespace RestauranteElEmperador.Repository
             app.clientes.Remove(c);
         }
 
-        public void Buscar(Cliente c)
+        public void insertar(Cliente c)
         {
-            app.clientes.Find(c);
+            app.Add(c);
+            app.SaveChanges();
         }
 
+   
         public ICollection<Cliente> listarcliente()
         {
             return app.clientes.ToList();

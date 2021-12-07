@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestauranteElEmperador.Services
 {
-    interface ICliente
+   public interface ICliente
     {
         void insertar(Cliente c);
 
@@ -17,9 +17,6 @@ namespace RestauranteElEmperador.Services
 
 
         ICollection<Cliente> listarcliente();
-
-
-
 
     }
 }

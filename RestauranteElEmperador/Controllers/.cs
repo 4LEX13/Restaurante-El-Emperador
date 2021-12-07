@@ -27,6 +27,7 @@ namespace RestauranteElEmperador.Controllers
         {
             Cliente cliente = new Cliente();
 
+            
             cliente.NombreCliente = "kevin";
             cliente.ApellidoCliente = "Navarro";
             cliente.DireccionCliente = "chalatenango";
@@ -40,9 +41,9 @@ namespace RestauranteElEmperador.Controllers
 
         public IActionResult GetAll()
         {
-            var DandoFormatoJson = icliente.listarC();
+            var DandoFormatoJson = icliente.listarcliente();
 
-            return Json(new { data = DandoFormatoJson });
+            return Json(new { Data = DandoFormatoJson });
         }
 
 
