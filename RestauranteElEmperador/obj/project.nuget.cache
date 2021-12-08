@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bZAfCEJkVnr18u0SrPzvfHIi3Jg2dGGuy73eTcxS7rJdGJqvXDCkxG1zH6PLIU+LDPnJyiJZsJAdlB3ITev5ug==",
+  "dgSpecHash": "o/xVw++2VwWLHBkP5aouIyJ9muuNUnSuNmE1yCSHZKGgrnt2x+OosGn2UYBT4gV1myS0wYEVpTNzc4XTj7RX5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\kevin\\Documents\\GitHub\\Restaurante-El-Emperador\\RestauranteElEmperador\\RestauranteElEmperador.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kevin\\.nuget\\packages\\bootstrap\\5.1.2\\bootstrap.5.1.2.nupkg.sha512",
     "C:\\Users\\kevin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kevin\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.12\\microsoft.aspnetcore.mvc.razor.extensions.5.0.12.nupkg.sha512",
     "C:\\Users\\kevin\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.12\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.12.nupkg.sha512",

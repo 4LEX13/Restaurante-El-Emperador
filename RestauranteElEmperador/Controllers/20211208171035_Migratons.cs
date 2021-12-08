@@ -2,7 +2,7 @@
 
 namespace RestauranteElEmperador.Migrations
 {
-    public partial class Migrations : Migration
+    public partial class Migratons : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,24 +46,47 @@ namespace RestauranteElEmperador.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ClienteId = table.Column<int>(type: "int", nullable: false),
                     PlatoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PrecioPalto = table.Column<int>(type: "int", nullable: false)
+                    PrecioPlato = table.Column<int>(type: "int", nullable: false),
+                    MenuId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_platos", x => x.PlatoId);
+                    table.ForeignKey(
+                        name: "FK_platos_clientes_ClienteId",
+                        column: x => x.ClienteId,
+                        principalTable: "clientes",
+                        principalColumn: "ClienteId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_platos_menus_MenuId",
+                        column: x => x.MenuId,
+                        principalTable: "menus",
+                        principalColumn: "MenuId",
+                        onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_platos_ClienteId",
+                table: "platos",
+                column: "ClienteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_platos_MenuId",
+                table: "platos",
+                column: "MenuId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "platos");
+
+            migrationBuilder.DropTable(
                 name: "clientes");
 
             migrationBuilder.DropTable(
                 name: "menus");
-
-            migrationBuilder.DropTable(
-                name: "platos");
         }
     }
 }

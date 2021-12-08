@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["RASTAURABTE"] = "Home Page";
+    ViewData["RASTAURABTE"] = "El EMPERADOR";
 }
 
 <div class="text-center">
@@ -7,21 +7,27 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<table id="mitabla" class="table table-striped table-hover">
+<table id="mitabla" class="table table-striped table-dark">
     <tehead>
         <tr>
-           
+
             <th>
-                Nombre del cliente
+                clienteId
             </th>
             <th>
-                Apellido
+                nombreCliente
             </th>
             <th>
-                Direccion
+                apellidoCliente
             </th>
             <th>
-                Telefono
+                direccionCliente
+            </th>
+            <th>
+                telefonoCliente
+            </th>
+            <th>
+                platos
             </th>
         </tr>
 
@@ -44,11 +50,12 @@
                 },
 
                 "columns": [
-                    { "data": "Nombre del cliente", "name": "Nombre del cliente", "autowidth": true },
-                    { "data": "Apellido", "name": "Apellido", "autowidth": true }
-                    { "data": "Direccion", "name": "Direccion", "autowidth": true }
-                    { "data": "Telefono", "name": "Telefono", "autowidth": true }
-
+                    { "data": "clienteId", "name": "clienteId", "autowidth": true },
+                    { "data": "nombreCliente", "name": "nombreCliente", "autowidth": true }
+                    { "data": "apellidoCliente", "name": "apellidoCliente", "autowidth": true }
+                    { "data": "direccionCliente", "name": "direccionCliente", "autowidth": true }
+                    { "data": "telefonoCliente", "name": "telefonoCliente", "autowidth": true }
+                    { "data": "platos", "name": "platos", "autowidth": true }
                 ]
 
             });

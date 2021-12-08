@@ -14,7 +14,7 @@ namespace RestauranteElEmperador.Dominio
         public int PlatoId { get; set; }
         public int ClienteId { get; set; }
         public string PlatoNombre { get; set; }
-        public int PrecioPalto { get; set; }
+        public int PrecioPlato { get; set; }
 
 
     }
